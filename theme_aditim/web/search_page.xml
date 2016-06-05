@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<record id="search_page_link" model="website.menu">
+			<field name="name">search_aditim</field>
+			<field name="url">/page/search_page</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">81</field>
+		</record>
+		
+		<template name="Aditim | Search Results" id="search_page" page="True">
+			<t t-call="website.layout">
+				<nav class="pushy pushy-left">
+			        <ul>
+			            <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+				          <li> <a href="/page/theme_aditim.projects_page">Проекты</a> </li>
+				          <li> <a href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+				          <li> <a href="/page/website.product_page">продукты</a> </li>
+				          <li> <a href="/page/website.contactus_page">контакты</a> </li>
+			        </ul>
+			    </nav>
+			    <div class="site-overlay"></div>
+				<div id="container" class="bg-p blog-bg search-bg">
+					<div class="menu-btn"><img src="/theme_aditim/static/src/images/mob-menu-butt.png" width="12" height="10" alt="" /></div>
+					<header>
+					    <nav class="navbar navbar-default">
+				            <div class="container bg-white">
+				                <div class="col-md-3 navbar-header page-scroll menu-fix-mob">
+				                    <button type="button" class="navbar-toggle hidden-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				                    <a class="navbar-brand" href="/"><img src="/theme_aditim/static/src/images/logo.png" width="140" height="58" alt="" /></a>
+				                </div>
+				                <div class="col-md-9 menu-fix-mob">
+				                    <div class="collapse navbar-collapse padd-45 hidden-xs" id="bs-example-navbar-collapse-1">
+				                        <ul class="nav navbar-nav navbar-right">
+				                              <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+											  <li> <a href="/page/theme_aditim.projects_page">Проекты</a> </li>
+											  <li> <a href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+											  <li> <a href="/page/website.product_page">продукты</a> </li>
+											  <li> <a href="/page/website.contactus_page">контакты</a> </li>
+				                        </ul>
+				                    </div>
+				                    <div class="search">
+				                    	<form t-attf-action="/search_results" method="get" >
+						                    <input type="search" t-att-value="search or ''" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" name="search" class="form-control search-box" maxlength="64" placeholder="энер|" />
+						                    <span id="hide" class="search-box">X</span>
+						                    <span id="show" class="search-btn"><img src="/theme_aditim/static/src/images/search-icon.png" width="12" height="12" alt="" /></span>
+						                    <button type="submit" style="display:none;"></button>
+						                </form>
+				                    </div>
+				                </div>
+				            </div>
+				        </nav>
+					</header>
+					<div class="container bg-white">
+					  <div class="col-md-12 bg-white">
+
+						<!-- SEARCH RESULT SECTION -->
+						<section>
+					      <div id="search_string" class="blogb-h">
+					        <h2>
+					          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					          результат поиска по запросу «энергосбережение»</h2>
+					      </div>
+					      <div id="search_result" class="search-page">
+					        <ul>
+					          <li>
+					            <h3>Показатель приведенного сопротивления теплопередачи — каким он должен быть и как его достичь?</h3>
+					            <p>Сейчас на Российском рынке до сих пор используются профильные алюминиевые системы, которые были разработаны десять лет назад и уже не могут отвечать современным требованиям по энергоэффективности. Эти требования регламентируются значением приведенного сопротивление теплопередачи. Показатель приведенного сопротивление теплопередачи, каким он должен быть?</p>
+					            <small>Найдено в разделе: <span>Проекты</span></small> </li>
+					          <li>
+					            <h3>Энергоэффективные решения в России: проблемы и перспективы</h3>
+					            <p>Сегодня в Европе наряду с классическим стандартом пассивного дома уже существуют стандарты «плюс» и «премиум» — основой для деления служат показатели энергии, которую дом сам генерирует для своих нужд.</p>
+					            <small>Найдено в разделе: <span>Блог</span></small> </li>
+					          <li>
+					            <h3>Дистанционная рамка Thermix<![CDATA[&reg;]]> Ambitherm<![CDATA[&reg;]]> plus</h3>
+					            <p>Дистанционная рамка нового поколения Thermix Ambitherm TX.N<![CDATA[&reg;]]> plus производится в Германии с соблюдением высших стандартов качества и отлично проявляет себя в российских климатических условиях.</p>
+					            <small>Найдено в разделе: <span>Продукты</span></small> </li>
+					          <li>
+					            <h3>Показатель приведенного сопротивления теплопередачи — каким он должен быть и как его достичь?</h3>
+					            <p>Сейчас на Российском рынке до сих пор используются профильные алюминиевые системы, которые были разработаны десять лет назад и уже не могут отвечать современным требованиям по энергоэффективности. Эти требования регламентируются значением приведенного сопротивление теплопередачи. Показатель приведенного сопротивление теплопередачи, каким он должен быть?</p>
+					            <small>Найдено в разделе: <span>Проекты</span></small> </li>
+					          <li>
+					            <h3>Энергоэффективные решения в России: проблемы и перспективы</h3>
+					            <p>Сегодня в Европе наряду с классическим стандартом пассивного дома уже существуют стандарты «плюс» и «премиум» — основой для деления служат показатели энергии, которую дом сам генерирует для своих нужд.</p>
+					            <small>Найдено в разделе: <span>Блог</span></small> </li>
+					        </ul>
+					      </div>
+					      <div id="search_pagination" class="col-sm-9 text-center pull-right">
+					        <ul class="pagination">
+					          <li class="disabled"><a href="#"><i class="glyphicon glyphicon-chevron-left"></i> </a></li>
+					          <li class="active"><a href="#">01<span class="sr-only">(current)</span></a></li>
+					          <li><a href="#">02</a></li>
+					          <li><a href="#">03</a></li>
+					          <li><a href="#">04</a></li>
+					          <li><a href="#">...</a></li>
+					          <li><a href="#">12</a></li>
+					          <li><a href="#"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+					        </ul>
+					      </div>
+					    </section>
+
+						<!-- BLOG-PROJECT SECTION -->
+						<section>
+					      <div class="blog-prod">
+					        <div class="col-sm-5">
+					          <h3><a href="/page/theme_aditim.blog_aggregator_page" class="hlink">блог</a></h3>
+					          <a href="#" class="plink"><p>Если вы работаете в отрасли энергоэффективного строительства или просто интересуетесь этой темой, вам будет интересно.</p></a>
+					          <p><a role="button" href="/page/theme_aditim.blog_aggregator_page" class="btn btn-lg btn-success">читать<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					        <div class="col-sm-1">&#160;</div>
+					        <div class="col-sm-6">
+					          <h3><a href="/page/theme_aditim.projects_page" class="hlink">Проекты</a></h3>
+					          <a href="/page/theme_aditim.projects_page" class="plink"><p>Мы думаем не только о технической стороне дела, но и о вашем бизнесе: по-настоящему эффективным может быть только оптимальное по цене решение. Ищете именно такое? </p></a>
+					          <p><a role="button" href="/page/theme_aditim.projects_page" class="btn btn-lg btn-success">реализованные проекты<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					      </div>
+					    </section>
+					  </div>
+					</div>
+					<footer>
+					  <div class="container">
+					    <div class="row">
+					      <div class="col-md-3">&#160;</div>
+					      <div class="col-md-9">
+					        <div class="footer-left">
+					          <p>Россия, 115088, г. Москва, ул. Угрешская. д. 2, стр. 6, 3 этаж</p>
+					          <span>+7 (495) 105-90-95</span> <span><a role="button" href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target=".contact-form-2">напишите нам! </a></span> <span><a role="button" href="/page/website.contactus_page" class="btn btn-lg btn-primary">как нас найти? </a></span> </div>
+					        <div class="footer-right"> <span><![CDATA[&copy;]]> 2015 ООО «Адитим»</span> </div>
+					      </div>
+					    </div>
+					  </div>
+					</footer>
+				</div>
+			</t>
+		</template>
+		
+		<template name="search_string_section" id="search_string_section" inherit_id="theme_aditim.search_page">
+			<xpath expr="//div[@id='search_string']" position="replace">
+				<div id="search_string" class="blogb-h">
+			        <h2 t-if="search">
+			          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			          <t t-esc="search"/></h2>
+			    </div>
+			</xpath>
+		</template>			    
+		
+		<template name="search_result_section" id="search_result_section" inherit_id="theme_aditim.search_page">
+			<xpath expr="//div[@id='search_result']" position="replace">
+				<div id="search_result" class="search-page">
+			        <ul t-if="results">
+			        	<t t-foreach="results" t-as="result">
+			        		<t t-call="theme_aditim.search_result_layout"/>
+			        	</t>
+			     	</ul>
+			     </div>
+			</xpath>
+		</template>
+		
+		<template name="search_result_layout" id="search_result_layout">
+			<li t-if="result['type']=='Blog post'" >
+	            <h3><a t-attf-href="#{result['url']}"><t t-esc="result['name']"/></a></h3>
+	            <t t-raw="result['content']" />
+	            <small>Найдено в разделе: <span>Блог</span></small> 
+	        </li>
+	        <li t-if="result['type']=='Blog post comment'" >
+	            <h3><a t-attf-href="#{result['url']}"><t t-esc="result['name']"/></a></h3>
+	            <t t-raw="result['content']" />
+	            <small>Найдено в разделе: <span>Блог</span></small> 
+	        </li>
+
+	        <!-- For Cases -->
+	        <!-- <li t-if="result['type']=='Page'" >
+	            <h3><a t-attf-href="#{result['url']}"><t t-esc="result['name']"/></a></h3>
+	            <p><t t-esc="result['content']" /></p>
+	            <small>Найдено в разделе: <span>Проекты</span></small> 
+	        </li> -->
+	        <li t-if="result['type']=='Product'" >
+	            <h3><a t-attf-href="#{result['url']}"><t t-esc="result['name']"/></a></h3>
+	            <t t-raw="result['content']" />
+	            <small>Найдено в разделе: <span>Продукты</span></small> 
+	        </li>
+		</template>
+		
+		<template name="search_pagination_section" id="search_pagination_section" inherit_id="theme_aditim.search_page">
+			<xpath expr="//div[@id='search_pagination']" position="replace">
+				<div t-if="pager" id="search_pagination" class="col-sm-9 text-center pull-right">
+					<ul t-if="pager['page_count'] > 1" t-attf-class="#{ classname or '' } pagination" t-att-style="style or ''">
+				        <li t-att-class=" 'disabled' if pager['page']['num'] == 1 else '' ">
+				            <a t-att-href=" pager['page_previous']['url'] if pager['page']['num'] != 1 else ''"><i class="glyphicon glyphicon-chevron-left"></i></a>
+				        </li>
+				        <t t-foreach="pager['pages']" t-as="page">
+				            <li t-att-class=" 'active' if page['num'] == pager['page']['num'] else '' "> <a t-att-href="page['url']" t-raw="page['num']"></a></li>
+				        </t>
+				        <li t-att-class=" 'disabled' if pager['page']['num'] == pager['page_count'] else '' ">
+				            <a t-att-href="pager['page_next']['url'] if pager['page']['num'] != pager['page_count'] else ''"><i class="glyphicon glyphicon-chevron-right"></i></a>
+				        </li>
+				    </ul>
+			     </div>
+			</xpath>
+		</template>
+	</data>
+</openerp>

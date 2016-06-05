@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<record id="main_home_page_link" model="website.menu">
+			<field name="name">Home_aditim</field>
+			<field name="url">/page/main_home_page</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">77</field>
+		</record>
+		
+		<template name="Aditim | Home" id="main_home_page" page="True">
+			<t t-call="website.layout">
+				<div class="fix-menu page-scroll">
+				  <nav class="navbar navbar-default navbar-fixed-top">
+				    <div class="collapse navbar-collapse fix-menu">
+				      <ul class="nav navbar-nav navbar-right">
+				        <li class=""> <a href="#page-top"></a> </li>
+				        <li class="icon2 page-scroll"> <a href="#Проекты"></a> </li>
+				        <li class="icon3 page-scroll"> <a href="#Блог"></a> </li>
+				        <li class="icon4 page-scroll"> <a href="#продукты"></a> </li>
+				        <li class="icon5 page-scroll"> <a href="#контакты"></a> </li>
+				      </ul>
+				    </div>
+				  </nav>
+				</div>
+				<!-- Pushy Menu -->
+			    <nav class="pushy pushy-left">
+			        <ul>
+			            <li class=""> <a href="#page-top">О нас и о вас</a> </li>
+				        <li class="icon2 page-scroll"> <a href="#Проекты">Проекты</a> </li>
+				        <li class="icon3 page-scroll"> <a href="#Блог">Блог</a> </li>
+				        <li class="icon4 page-scroll"> <a href="#продукты">продукты</a> </li>
+				        <li class="icon5 page-scroll"> <a href="#контакты">контакты</a> </li>
+			        </ul>
+			    </nav>
+			
+			    <!-- Site Overlay -->
+			    <div class="site-overlay"></div>
+			    
+			    
+				<div id="container">    
+					<div class="menu-btn"><img src="/theme_aditim/static/src/images/mob-menu-butt.png" width="12" height="10" alt="" /></div>
+				
+					<header id="page-top">
+					    
+				        <nav class="navbar navbar-default navbar-fixed-top2">
+				            <div class="container">
+				                <div class="navbar-header page-scroll">
+				                    <button type="button" class="navbar-toggle hidden-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+				                    <a class="navbar-brand" href="#page-top"><img src="/theme_aditim/static/src/images/logo.png" width="140" height="58" alt="" /></a>
+				                </div>
+				                <div class="collapse navbar-collapse hidden-xs" id="bs-example-navbar-collapse-1">
+				                    <ul class="nav navbar-nav navbar-right">
+				                        <li class="page-scroll"> <a href="#page-top">О нас и о вас</a> </li>
+				                        <li class="page-scroll"> <a href="#Проекты">Проекты</a> </li>
+				                        <li class="page-scroll"> <a href="#Блог">Блог</a> </li>
+				                        <li class="page-scroll"> <a href="#продукты">продукты</a> </li>
+				                        <li class="page-scroll"> <a href="#контакты">контакты</a> </li>
+				                    </ul>
+				                </div>
+				                <div id="main_search" class="search">
+				                	<form t-attf-action="/search_results" method="get" >
+					                    <input type="search" t-att-value="search or ''" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" name="search" class="form-control search-box" maxlength="64" placeholder="энер|" />
+					                    <span id="hide" class="search-box">X</span>
+					                    <span id="show" class="search-btn"><img src="/theme_aditim/static/src/images/search-icon.png" width="12" height="12" alt="" /></span>
+					                    <button type="submit" style="display:none;"></button>
+					                </form>
+				                </div>
+				            </div>
+				            <!-- /.container-fluid -->
+				        </nav>
+					</header>
+					
+					<!-- 	BENNAR SECTION -->
+					<section>
+					  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+					    <ol class="carousel-indicators visible-xs">
+					      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					      <li data-target="#myCarousel" data-slide-to="1"></li>
+					      <li data-target="#myCarousel" data-slide-to="2"></li>
+					      <li data-target="#myCarousel" data-slide-to="3"></li>
+					      <li data-target="#myCarousel" data-slide-to="4"></li>
+					    </ol>
+					    <div class="carousel-inner" role="listbox">
+					      <div class="item active"> <img class="first-slide" src="/theme_aditim/static/src/images/banner-bg-1.jpg" alt="First slide" />
+					        <div class="container">
+					          <div class="carousel-caption">
+					            <div class="col-sm-3">&#160;</div>
+					            <div class="col-sm-9">
+					              <div class="banner-box-img">
+					                <div class="img1"><img src="/theme_aditim/static/src/images/slide-image-1.png"  alt="" /></div>
+					              </div>
+					              <h1>Изобретать. Воплощать в жизнь. Делать ваш бизнес лучше.</h1>
+					              <h6>Эффективные решения в области энергосбережения</h6>
+					              <p class="hidden-xs">По всему миру мы находим интересные технологии и новые материалы для производителей алюминиевых окон и стеклопакетов и помогаем внедрить их на производство.</p>
+					              <p class="hidden-xs">И наоборот — если у вас есть конкретная задача, мы изобретаем ее решение. Мы проводим испытания, делаем теплофизические расчеты, консультируем архитекторов и проектировщиков, создаем энергоэффективные проекты для системных домов и переработчиков.</p>
+					              <p class="hidden-xs">Словом, наша работа – это решения в области энергосбережения. Решения, которые делают ваш бизнес эффективнее, вашу продукцию — конкурентоспособнее, а ваших клиентов — счастливее.</p>
+					              <p><a class="btn btn-lg btn-primary btnn" href="/page/website.aboutus_page" role="button">5 способов сделать ваш бизнес эффективнее <i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="item"> <img class="second-slide" src="/theme_aditim/static/src/images/banner-bg-2.jpg" alt="Second slide" />
+					        <div class="container">
+					          <div class="carousel-caption">
+					            <div class="col-sm-3">&#160;</div>
+					            <div class="col-sm-9">
+					              <div class="banner-box-img">
+					                <div class="img2"><img src="/theme_aditim/static/src/images/slide-image-2.png"  alt="" /></div>
+					              </div>
+					              <h1>проекты</h1>
+					              <p>Больше всего нам нравится делать ваш бизнес эффективнее. 
+					                Наши любимые задачи – те, которые на первый взгляд кажутся невыполнимыми. О некоторых кейсах мы решили рассказать —
+					                и следующий проект готовы делать уже с вами!</p>
+					              <p><a class="btn btn-lg btn-primary" href="/page/theme_aditim.projects_page" role="button">Реализованные проекты <i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="item"> <img class="third-slide" src="/theme_aditim/static/src/images/banner-bg-3.jpg" alt="Third slide" />
+					        <div class="container">
+					          <div class="carousel-caption">
+					            <div class="col-sm-3">&#160;</div>
+					            <div class="col-sm-9">
+					              <div class="banner-box-img">
+					                <div class="img3"><img src="/theme_aditim/static/src/images/slide-image-3.png"  alt="" /></div>
+					              </div>
+					              <h1> Блог</h1>
+					              <p>Дневник симпатичной энергосберегающей компании: новости рынка, отраслевая аналитика, истории из нашей — и из вашей — практики.</p>
+					              <p><a class="btn btn-lg btn-primary" href="/page/theme_aditim.blog_aggregator_page" role="button">Читать<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="item"> <img class="forth-slide" src="/theme_aditim/static/src/images/banner-bg-4.jpg" alt="forth slide" />
+					        <div class="container">
+					          <div class="carousel-caption">
+					            <div class="col-sm-3">&#160;</div>
+					            <div class="col-sm-9">
+					              <div class="banner-box-img">
+					                <div class="img4"><img src="/theme_aditim/static/src/images/slide-image-4.png"  alt="" /></div>
+					              </div>
+					              <h1>продукты</h1>
+					              <p>Каждый день мы находим новые решения, чтобы снизить себестоимость вашей продукции — так мы добиваемся для вас оптимальных условий 
+					                у первоклассных европейских производителей, вместе с ними проектируем решения специально для ваших систем и находимся 
+					                в постоянном поиске новых технологий и полезных инноваций.</p>
+					              <p><a class="btn btn-lg btn-primary" href="/page/website.product_page" role="button">Готовые решения<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="item"> <img class="fifth-slide" src="/theme_aditim/static/src/images/banner-bg-5.jpg" alt="fifth slide" />
+					        <div class="container">
+					          <div class="carousel-caption">
+					            <div class="col-sm-3">&#160;</div>
+					            <div class="col-sm-9">
+					              <div class="banner-box-img">
+					                <div class="img5"><img src="/theme_aditim/static/src/images/slide-image-5.png"  alt="" /></div>
+					              </div>
+					              <h1>Хорошая компания</h1>
+					              <p>Очень внимательные менеджеры и необыкновенно талантливые инженеры. Добро пожаловать в хорошую компанию!</p>
+					              <p><a class="btn btn-lg btn-primary" href="/page/website.contactus_page" role="button">Напишите нам<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+					  <div class="sky"><img src="/theme_aditim/static/src/images/sky-bg.jpg" alt="" /></div>
+					</section>
+	
+					<!-- PROJECT SECTION -->
+					<section id="Проекты" class="step-2 step main-div">
+					  <div class="container">
+					    <div class="row">
+					      <div class="col-sm-3">&#160;</div>
+					      <div class="col-sm-9">
+					        <h2><a href="/page/theme_aditim.projects_page" class="hlink">Проекты</a></h2>
+					        <a href="/page/theme_aditim.projects_page" class="plink"><p>Что у нас есть: талантливые инженеры, 15-летний опыт работы в области энергоэффективности, устоявшиеся деловые связи с проверенными производителями, надежная логистическая поддержка и собственная экспериментальная производственная база.</p>
+					        <p>Чего у нас нет: полного и конечного списка оказываемых услуг. К нам действительно можно прийти с любой инженерной задачей, и мы найдем решение.</p>
+					        <p>Мы решили рассказать о некоторых наших кейсах. Вы увидите, что мы думаем не только о технической стороне дела, но и о вашем бизнесе: по-настоящему эффективным может быть только оптимальное по цене решение. Ищете именно такое? Давайте искать вместе!</p></a>
+					        <p><a class="btn btn-lg btn-success" href="/page/theme_aditim.projects_page" role="button">Реализованные проекты<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        <div class="lfe">
+					          <div class="lfe-left"> <img src="/theme_aditim/static/src/images/lfe-img-left.png" alt="" /> </div>
+					          <div id="case_detail" class="lfe-right">
+					            <h3>Термовставки с фольгой Timberal-Insulbar® LEF</h3>
+					            <p>К нам обратилась компания-производитель оконных и дверных систем, использующая в своих изделиях термовставки шириной 34 мм. С некоторых пор такой размер перестал отвечать ужесточившимся требованиям по энергосбережению зданий и сооружений, поэтому многие производители находятся в поиске решений, позволяющих достичь нужных результатов. </p>
+					            <span>Компания: Montblanc</span> </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</section>
+	
+					<!-- BLOG SECTION -->
+					<section class="step step-3 main-div" id="Блог">
+					  <div class="container">
+					    <div class="row">
+					      <div class="col-sm-3">&#160;</div>
+					      <div class="col-sm-9">
+					        <h2><a href="/page/theme_aditim.blog_aggregator_page" class="hlink">Блог</a></h2>
+					        <a href="/page/theme_aditim.blog_aggregator_page" class="plink"><p>Мы любим свою работу, и готовы говорить о ней часами. Поэтому мы завели блог. Отраслевая аналитика, новости рынка, интересные кейсы (из нашей и вашей практики), полезная практическая информация для коллег. Если вы работаете в отрасли энергоэффективного строительства или просто интересуетесь этой темой, добавляйте в закладки!</p></a>
+					        <p><a class="btn btn-lg btn-success" href="/page/theme_aditim.blog_aggregator_page" role="button">читать<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        <div id="new_blog" class="batimat">
+					          <ul>
+					            <li><img src="/theme_aditim/static/src/images/batimat-img01.jpg" alt="" />
+					              <p>BATIMAT RUSSIA 2015: о новинках и качестве</p>
+					              <span>05 мая</span><span><img src="/theme_aditim/static/src/images/chat-icon.png" width="9" height="10" alt="" /> 3 комментария</span> </li>
+					            <li><img src="/theme_aditim/static/src/images/batimat-img02.jpg" alt="" />
+					              <p>TurkeyBuild: путевые заметки</p>
+					              <span> 05 мая</span> </li>
+					          </ul>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</section>
+	
+					<!-- PRODUCT SECTION -->
+					<section id="продукты" class="step step-4 main-div">
+					  <div class="container">
+					    <div class="row">
+					      <div class="col-sm-3">&#160;</div>
+					      <div class="col-sm-9">
+					        <h2><a href="/page/website.product_page" class="hlink">продукты</a></h2>
+					        <a href="/page/website.product_page" class="plink"><p>По всему миру мы ищем новые технологии и материалы и каждый день находим решения, которые позволят снизить себестоимость вашей продукции. Мы добиваемся для вас оптимальных условий у производителей, серьезно инвестируем в собственную логистическую систему, имеем опыт внедрения новых технологий на ваше производство.</p></a>
+					        <p><a class="btn btn-lg btn-success" href="/page/website.product_page" role="button">готовые решения<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        <div id="product_cat_section" class="portfolio">
+					          <ul>
+					            <li><img src="/theme_aditim/static/src/images/portfolio01.jpg" alt="" />
+					              <p>Дистанционная рамка Thermix® Ambitherm® plus</p>
+					            </li>
+					            <li><img src="/theme_aditim/static/src/images/portfolio02.jpg" alt="" />
+					              <p>Комплектующие для дистанционной рамки</p>
+					            </li>
+					            <li><img src="/theme_aditim/static/src/images/portfolio03.jpg" alt="" />
+					              <p>Термоизолирующий профиль Timberal® Profiles (H-PVC)</p>
+					            </li>
+					            <li><img src="/theme_aditim/static/src/images/portfolio04.jpg" alt="" />
+					              <p>Полиамидный профиль Timberal-Insulbar®</p>
+					            </li>
+					            <li><img src="/theme_aditim/static/src/images/portfolio05.jpg" alt="" />
+					              <p>Уплотнители из TPV Foam</p>
+					            </li>
+					            <li><img src="/theme_aditim/static/src/images/portfolio06.jpg" alt="" />
+					              <p>Профили из вспененного полиэтилена AdiFoam</p>
+					            </li>
+					          </ul>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</section>
+	
+					<!-- CONTACT US SECTION -->
+					<section id="контакты" class="step step-5 main-div">
+					  <div class="container">
+					    <div class="row">
+					      <div class="col-sm-3">&#160;</div>
+					      <div class="col-sm-9">
+					        <h2>Добро пожаловать<br />
+					          в хорошую компанию!</h2>
+					        <p>Заботливые менеджеры обработают ваш запрос в кратчайшие сроки, <br />
+					          а талантливые инженеры решат ваши самые сложные производственные задачи.</p>
+					        <h4>+7 (495) 105-90-95   / <a href="mailto:info@aditim.ru">info@aditim.ru</a></h4>
+					        <h5>Россия, 115088, г. Москва, ул. Угрешская. д. 2, стр. 6, 3 этаж</h5> <span>Адреса складов</span>
+					        <div class="left"><a class="btn btn-lg btn-success" href="/page/website.contactus_page" role="button">Как нас найти<i class="glyphicon glyphicon-chevron-right"></i> </a></div>
+					        <div class="left"><a class="btn btn-lg btn-success" href="#" role="button" data-toggle="modal" data-target=".contact-form-2">Напишите нам<i class="glyphicon glyphicon-chevron-right"></i> </a></div>
+					      </div>
+					      <div class="footer"><![CDATA[&copy;]]> 2015 ООО «Адитим»</div>
+					    </div>
+					  </div>
+					</section>
+				</div>
+			</t>
+		</template>
+		<template name="main_page_product_section" id="main_page_product_section" inherit_id="theme_aditim.main_home_page">
+			<xpath expr="//div[@id='product_cat_section']" position="replace">
+				<div id="product_cat_section" class="portfolio">
+		          <ul>
+		          	<t t-foreach="productMainCategories" t-as="c">
+			            <t t-if="c.isMainCategory">
+							<li>
+								<t t-if="c.hasSubCategory">
+									<a href="/page/product_page">
+										<img alt="" t-att-src="c.categoryImage" />
+										<p><t t-esc="c.name"></t></p>
+									</a>
+								</t>
+								<t t-if="not c.hasSubCategory">
+									<a t-attf-href="/page/product_interior_page/#{ slug(c) }">
+										<img alt="" t-att-src="c.categoryImage" />
+										<p><t t-esc="c.name"></t></p>
+									</a>
+								</t>
+							</li>
+						</t>
+		          	</t>
+		          </ul>
+		        </div>
+			</xpath>
+		</template>
+		<template name="main_page_blog_section" id="main_page_blog_section" inherit_id="theme_aditim.main_home_page">
+			<xpath expr="//div[@id='new_blog']" position="replace">
+				<div id="new_blog" class="batimat">
+		          <ul>
+		          	<t t-foreach="latest_blog" t-as="blog">
+			            <li>
+			            	<a t-attf-href="/page/#{ slug(blog.blog_id) }/post/#{ slug(blog) }" t-field="blog.blogPostImage" t-field-options='{"widget": "image"}'/>
+			              	<p><a t-attf-href="/page/#{ slug(blog.blog_id) }/post/#{ slug(blog) }" class="mblink"><t t-esc="blog.name"></t></a></p>
+			              	<span t-field="blog.create_date" t-field-options='{"format": "dd MMMM"}'/>
+			              	<t t-if="len(blog.message_ids) &gt; 0"> 
+				            	<span><img src="/theme_aditim/static/src/images/chat-icon.png" width="9" height="10" alt="" /><a t-attf-href="/page/#{ slug(blog.blog_id) }/post/#{ slug(blog) }" class="clink"> <t t-esc="len(blog.message_ids)"/> комментария</a></span>
+				            </t>
+			            </li>
+		          	</t>
+		          </ul>
+		        </div>
+			</xpath>
+		</template>
+		<template name="main_page_case_section" id="main_page_case_section" inherit_id="theme_aditim.main_home_page">
+			<xpath expr="//div[@id='case_detail']" position="replace">
+				<div t-if="case_post" id="case_detail" class="lfe-right">
+		            <h3><t t-esc="case_post.name"></t></h3>
+		            <p><t t-esc="case_post.description"></t></p>
+		            <small t-if="case_post.company">Компания: <t t-esc="case_post.company"></t></small> </div>	
+			</xpath>
+		</template>
+	</data>
+</openerp>

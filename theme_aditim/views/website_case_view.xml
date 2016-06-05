@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+    	<record model="ir.ui.view" id="view_case_category_list">
+            <field name="name">case.category.list</field>
+            <field name="model">case.category</field>
+            <field name="arch" type="xml">
+                <tree string="Cases Category">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_blog_blog_form">
+            <field name="name">case.category.form</field>
+            <field name="model">case.category</field>
+            <field name="arch" type="xml">
+                <form string="Case Category">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_case_category">
+            <field name="name">Cases Category</field>
+            <field name="res_model">case.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		<!--         Case Posts  -->
+		<record model="ir.ui.view" id="view_case_post_list">
+            <field name="name">case.post.list</field>
+            <field name="model">case.post</field>
+            <field name="arch" type="xml">
+                <tree string="Case Posts">
+                    <field name="name"/>
+                    <field name="case_cat_id"/>
+                    <field name="create_uid" invisible="1"/>
+                    <field name="write_uid"/>
+                    <field name="write_date"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_case_post_form">
+            <field name="name">case.post.form</field>
+            <field name="model">case.post</field>
+            <field name="arch" type="xml">
+                <form string="Case Post">
+                    <sheet>
+                        <group>
+                            <field name="name" placeholder="Name"/>
+                            <field name="company"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="case_cat_id"/>
+                            <field name="important_case"/>
+                        </group>
+                        <group>
+                            <field name="visits"/>
+                            <field name="description"/>
+                            <field name="cases_attachment_ids" widget="many2many_binary"/>
+                            <field name="decision_attachment_ids" widget="many2many_binary"/>
+                            <field name="content"/>
+                            <field name="content_decision"/>
+                        </group>
+                        <group string="Technical" groups="base.group_no_one">
+                            <field name="write_uid" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'base.group_document_user']}"/>
+                            <field name="write_date"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}' placeholder="Send a message to the group"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_case_post">
+            <field name="name">Case Posts</field>
+            <field name="res_model">case.post</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_case_post_list"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new Case.
+                </p>
+            </field>
+        </record>
+
+    	<menuitem name="Project/Cases" id="menu_cases" parent="knowledge.menu_document" sequence="30" />
+    		<menuitem id="project_cases_category" parent="menu_cases" name="Cases Category" action="action_case_category" sequence="10" />
+    		<menuitem id="project_cases" parent="menu_cases" name="Cases" action="action_case_post" sequence="20" />
+    </data>
+</openerp>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<!--     	Product Demo Data Main Category -->
+    	<record id="product_category_spacer_thermix" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Дистанционная рамка Thermix® Ambitherm® plus</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/portfolio01.jpg</field>
+            <field name="isMainCategory">true</field>
+            <field name="detailPage">theme_aditim.product_profiles_polyethylene</field>
+        </record>
+        <record id="product_category_accessories_for_spacer" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Комплектующие для дистанционной рамки</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/portfolio02.jpg</field>
+            <field name="isMainCategory">true</field>
+            <field name="hasSubCategory">true</field>
+        </record>
+        <record id="product_category_insulation_profile" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Термоизолирующий профиль Timberal® Profiles (H-PVC)</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/portfolio03.jpg</field>
+            <field name="isMainCategory">true</field>
+            <field name="detailPage">theme_aditim.product_insulation_profile_timberal</field>
+        </record>
+        <record id="product_category_polyamide_profile" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Полиамидный профиль Timberal-Insulbar®</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/portfolio04.jpg</field>
+            <field name="isMainCategory">true</field>
+            <field name="detailPage">theme_aditim.product_polyamide_profile_timberal</field>
+        </record>
+        <record id="product_category_TPV_Foam" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Уплотнители из TPV Foam</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/portfolio05.jpg</field>
+            <field name="isMainCategory">true</field>
+            <field name="detailPage">theme_aditim.product_TPV_foam_sealants</field>
+        </record>
+        <record id="product_category_profiles_of_polyethylene" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Профили из вспененного полиэтилена AdiFoam</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/portfolio06.jpg</field>
+            <field name="isMainCategory">true</field>
+            <field name="detailPage">theme_aditim.product_accessories_for_spacer</field>
+        </record>
+        
+		<!--         Product subcategory demo data  -->
+		<record id="product_category_bushings" model="product.category">
+            <field name="parent_id" ref="theme_aditim.product_category_accessories_for_spacer"/>
+            <field name="name">Втулки</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/pamkn-img01.jpg</field>
+        </record>
+        <record id="product_category_plugs" model="product.category">
+            <field name="parent_id" ref="theme_aditim.product_category_accessories_for_spacer"/>
+            <field name="name">Заглушки</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/pamkn-img02.jpg</field>
+        </record>
+        <record id="product_category_connectors" model="product.category">
+            <field name="parent_id" ref="theme_aditim.product_category_accessories_for_spacer"/>
+            <field name="name">Соединители</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/pamkn-img03.jpg</field>
+        </record>
+        <record id="product_category_corners" model="product.category">
+            <field name="parent_id" ref="theme_aditim.product_category_accessories_for_spacer"/>
+            <field name="name">Уголки</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/pamkn-img04.jpg</field>
+        </record>
+        <record id="product_category_shpross" model="product.category">
+            <field name="parent_id" ref="theme_aditim.product_category_accessories_for_spacer"/>
+            <field name="name">Шпросс</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/pamkn-img05.jpg</field>
+        </record>
+        <record id="product_category_a	ccessories_shpross" model="product.category">
+            <field name="parent_id" ref="theme_aditim.product_category_accessories_for_spacer"/>
+            <field name="name">Комплектующие шпросс</field>
+            <field name="isProductVisible">true</field>
+            <field name="categoryImage">/theme_aditim/static/src/images/pamkn-img06.jpg</field>
+        </record>
+    </data>
+</openerp>

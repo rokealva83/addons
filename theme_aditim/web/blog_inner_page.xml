@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<record id="blog_inner_page_link" model="website.menu">
+			<field name="name">blog_inner_aditim</field>
+			<field name="url">/page/blog_inner_page</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">83</field>
+		</record>
+		
+		<template name="Aditim | Blog" id="blog_inner_page" page="True">
+			<t t-call="website.layout">
+				<nav class="pushy pushy-left">
+			        <ul>
+			            <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+				          <li> <a href="/page/theme_aditim.projects_page">Проекты</a> </li>
+				          <li> <a class="active" href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+				          <li> <a href="/page/website.product_page">продукты</a> </li>
+				          <li> <a href="/page/website.contactus_page">контакты</a> </li>
+			        </ul>
+			    </nav>
+			    <div class="site-overlay"></div>
+				<div id="container" class="bg-p bg-p1">
+					<div class="menu-btn"><img src="/theme_aditim/static/src/images/mob-menu-butt.png" width="12" height="10" alt="" /></div>
+					<header>
+					    <nav class="navbar navbar-default">
+				            <div class="container bg-white">
+				                <div class="col-md-3 navbar-header page-scroll menu-fix-mob">
+				                    <button type="button" class="navbar-toggle hidden-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				                    <a class="navbar-brand" href="/"><img src="/theme_aditim/static/src/images/logo.png" width="140" height="58" alt="" /></a>
+				                </div>
+				                <div class="col-md-9 menu-fix-mob">
+				                    <div class="collapse navbar-collapse padd-45 hidden-xs" id="bs-example-navbar-collapse-1">
+				                        <ul class="nav navbar-nav navbar-right">
+				                              <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+											  <li> <a href="/page/theme_aditim.projects_page">Проекты</a> </li>
+											  <li> <a class="active" href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+											  <li> <a href="/page/website.product_page">продукты</a> </li>
+											  <li> <a href="/page/website.contactus_page">контакты</a> </li>
+				                        </ul>
+				                    </div>
+				                    <div class="search">
+				                    	<form t-attf-action="/bsearch_results" method="get" >
+						                    <input type="search" t-att-value="search or ''" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" name="search" class="form-control search-box" maxlength="64" placeholder="энер|" />
+						                    <span id="hide" class="search-box">X</span>
+						                    <span id="show" class="search-btn"><img src="/theme_aditim/static/src/images/search-icon.png" width="12" height="12" alt="" /></span>
+						                    <button type="submit" style="display:none;"></button>
+						                </form>
+				                    </div>
+				                </div>
+				            </div>
+				        </nav>
+					</header>
+					<div class="container bg-white">
+					  <div class="col-sm-12 bg-white">
+
+						<!-- DETAIL BLOG SECTION -->
+						<section>
+					      <div class="main-cont">
+					        <div class="col-md-9">
+					          <div class="page-menu">
+					            <ul>
+					              <li><a href="/page/theme_aditim.blog_aggregator_page">aditim</a></li>
+					              <li>/</li>
+					              <li>блог</li>
+					              <li>/</li>
+					            </ul>
+					          </div>
+					          <div class="prod-con-left">
+					          	<div id="blog_title">
+						            <h2>Энергоэффективные решения: проблемы и перспективы</h2>
+						            <h5>Сегодня в Европе наряду с классическим стандартом пассивного дома уже существуют стандарты «плюс» и «премиум» — основой для деления служат показатели энергии, которую дом сам генерирует для своих нужд.</h5>
+					            </div>
+
+					            <div id="blog_main_content" class="mt16" t-field="blog_post_detail.content" />
+					            
+					            <div class="quoteb">
+					            <!-- 	Blog Date and Tags Section	-->
+					              <div id="datetags">
+					              </div>
+								<!-- 		blog comment section -->
+					              <div id="comment_section">
+					       		  </div>
+								<!-- 	Sending comment section	-->
+					       		  <div id="put_comment">
+					              </div>
+					            </div>
+					          </div>
+					        </div>
+					        <div id="blog_right" class="col-md-3">
+					        </div>
+					      </div>
+					    </section>
+
+						<!-- FOUR POPULAR BLOGS	 -->
+						<section id="four_blogs" class="comoe">
+					    </section>
+
+						<!-- BLOG-PROJECT SECTION -->
+						<section>
+					      <div class="blog-prod blog-prod-new">
+					        <div class="col-sm-5">
+					          <h3><a href="/page/theme_aditim.blog_aggregator_page" class="hlink">блог</a></h3>
+					          <a href="#" class="plink"><p>Если вы работаете в отрасли энергоэффективного строительства или просто интересуетесь этой темой, вам будет интересно.</p></a>
+					          <p><a role="button" href="/page/theme_aditim.blog_aggregator_page" class="btn btn-lg btn-success">читать<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					        <div class="col-sm-1">&#160;</div>
+					        <div class="col-sm-6">
+					          <h3><a href="/page/theme_aditim.projects_page" class="hlink">Проекты</a></h3>
+					          <a href="/page/theme_aditim.projects_page" class="plink"><p>Мы думаем не только о технической стороне дела, но и о вашем бизнесе: по-настоящему эффективным может быть только оптимальное по цене решение. Ищете именно такое? </p></a>
+					          <p><a role="button" href="/page/theme_aditim.projects_page" class="btn btn-lg btn-success">реализованные проекты<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					      </div>
+					    </section>
+					  </div>
+					</div>
+					<footer>
+					  <div class="container">
+					    <div class="col-sm-12">
+					      <div class="footer-left">
+					        <p>Россия, 115088, г. Москва, ул. Угрешская. д. 2, стр. 6, 3 этаж</p>
+					        <span>+7 (495) 105-90-95</span> <span><a role="button" href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target=".contact-form-2">напишите нам! </a></span> <span><a role="button" href="/page/website.contactus_page" class="btn btn-lg btn-primary">как нас найти? </a></span> </div>
+					      <div class="footer-right"> <span><![CDATA[&copy;]]> 2015 ООО «Адитим»</span> </div>
+					    </div>
+					  </div>
+					</footer>
+				</div>
+				
+				<!-- pop 1 start-->
+				<div class="modal fade pop-up-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				      </div>
+				      <div class="modal-body">
+				        <div class="modal-main">
+				          <div class="col-sm-6"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /></div>
+				          <div class="col-sm-6">
+				            <h3>Полиамидный профиль Timberal-Insulbar<![CDATA[&reg;]]>, 24 мм, I-тип, сложная геометрия</h3>
+				            <span>Артикул 100.186</span> <span><a class="btn btn-lg btn-success" data-toggle="modal" data-target=".pop-up-2" href="#" role="button">заказать прайс-лист<i class="glyphicon glyphicon-chevron-right"></i> </a></span> </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</t>
+		</template>
+
+
+		<template name="four_popular_blog_section" id="four_popular_blog_section" inherit_id="theme_aditim.blog_inner_page">
+			<xpath expr="//section[@id='four_blogs']" position="replace">
+				<section id="four_blogs" class="comoe comoe1">
+			      <h3>самое популярное</h3>
+			      <ul>
+				      <t t-foreach="four_popular" t-as="fpblog">
+						<li>
+			        		<a t-attf-href="/page/#{ slug(fpblog.blog_id) }/post/#{ slug(fpblog) }" t-field="fpblog.blogPostImage" t-field-options='{"widget": "image"}'/>
+			            	<h4><a t-attf-href="/page/#{ slug(fpblog.blog_id) }/post/#{ slug(fpblog) }" class="mblink"><t t-esc="fpblog.name"></t></a></h4>
+			            	<span t-field="fpblog.create_date" t-field-options='{"format": "dd MMMM"}'/>
+			            	<t t-if="len(fpblog.message_ids) &gt; 0"> 
+				            	<span><img src="/theme_aditim/static/src/images/chat-icon.png" alt="" /><a t-attf-href="/page/#{ slug(fpblog.blog_id) }/post/#{ slug(fpblog) }" class="clink"> <t t-esc="len(fpblog.message_ids)"/></a></span>
+				            </t>
+		            	</li>
+				      </t>
+			      </ul>
+			    </section>
+			</xpath>
+		</template>
+		<template name="blog_right_tag_section" id="blog_right_tag_section" inherit_id="theme_aditim.blog_inner_page">
+			<xpath expr="//div[@id='blog_right']" position="replace">
+				<div id="blog_right" class="col-md-3">
+		          <div id="three_right_blogs" class="bloga-right visible-md visible-lg">
+			          <ul>
+			          	<li id="bd_tagcloud">
+			            	
+			            </li>
+			            <t t-foreach="three_popular" t-as="tpblog">
+							<li>
+				        		<a t-attf-href="/page/#{ slug(tpblog.blog_id) }/post/#{ slug(tpblog) }" t-field="tpblog.blogPostImage" t-field-options='{"widget": "image"}'/>
+				            	<h4><a t-attf-href="/page/#{ slug(tpblog.blog_id) }/post/#{ slug(tpblog) }" class="mblink"><t t-esc="tpblog.name"></t></a></h4>
+				            	<span t-field="tpblog.create_date" t-field-options='{"format": "dd MMMM"}'/>
+				            	<t t-if="len(tpblog.message_ids) &gt; 0"> 
+					            	<span><img src="/theme_aditim/static/src/images/chat-icon.png" alt="" /><a t-attf-href="/page/#{ slug(tpblog.blog_id) }/post/#{ slug(tpblog) }" class="clink"> <t t-esc="len(tpblog.message_ids)"/></a></span>
+					            </t>
+			            	</li>
+					      </t>
+			          </ul>
+		          </div>
+		        </div>
+	       </xpath>
+       </template>
+       <template name="right_blog_cloud_section" id="right_blog_cloud_section" inherit_id="theme_aditim.blog_right_tag_section">
+       		<xpath expr="//li[@id='bd_tagcloud']" position="inside">
+       			<div class="cloud-tag">
+                   <div id="myCanvasContainer">
+                       <canvas height="300" style="width:100%;" id="myCanvas">
+                           <p>Anything in here will be replaced on browsers that support the canvas element</p>
+                       </canvas>
+                   </div>
+                   <div id="tags" style="display:none">
+                       <ul>
+                           <t t-foreach="blog_tags_cloud" t-as="bt">
+                           	 <li><a t-attf-href="/page/tag/#{ slug(bt) }"><t t-esc="bt.name"></t></a></li>
+                           </t>
+                       </ul>
+                   </div>
+				</div>
+       		</xpath>
+       </template>
+		
+		<template name="blog_comments_section" id="blog_comments_section" inherit_id="theme_aditim.blog_inner_page">
+			<xpath expr="//div[@id='comment_section']" position="replace">
+				<div id="comment_section">
+					<t t-if="len(blog_comments) &gt; 0">
+			           <h3>комментарии</h3>
+			           <t t-foreach="blog_comments" t-as="comment">
+				           <h5><t t-esc="comment.organization_name"></t> <small t-field="comment.create_date" t-field-options='{"format": "dd MMM yyyy"}'/><small> в </small><small t-field="comment.create_date" t-field-options='{"format": "hh:mm"}'/></h5>
+				           <p><t t-esc="comment.comment_text"></t></p>
+			           </t>
+		           </t>
+				</div>
+			</xpath>
+		</template>
+		
+		<template name="blog_send_comments_section" id="blog_send_comments_section" inherit_id="theme_aditim.blog_inner_page">
+			<xpath expr="//div[@id='put_comment']" position="replace">
+				<div id="put_comment">
+	              <form id="comment" class="quotec" t-attf-action="/blogpost/comment/#{ slug(blog_post_detail) }" role="form">
+	                <div class="row">
+	                  <div class="col-sm-12">
+	                    <h3>Добавить комментарий</h3>
+	                    <label>Важные уточнения:</label>
+	                    <textarea rows="3" id="blog_comment" name="blog_comment" class="form-control" required="required"></textarea>
+	                  </div>
+	                  <div class="col-sm-5">
+	                    <div class="form-group">
+	                      <label>Название организации:</label>
+	                      <input type="text" class="form-control input-sm" id="org_name" name="org_name" required="required" />
+	                    </div>
+	                  </div>
+	                  <div class="col-sm-5">
+	                    <div class="form-group">
+	                      <label>Ваш город:</label>
+	                      <input type="text" class="form-control input-sm" id="city" name="city" />
+	                    </div>
+	                  </div>
+	                  <div class=" col-xs-4 col-sm-2">
+	                    <div class="captcha">
+	                      <label id="num1"></label> <label>+</label> <label id="num2"></label> <label>=</label>
+	                      <input type="text" id="total" autocomplete="off" class="form-control input-sm" name="captch" required="required" />
+	                    </div>
+	                  </div>
+	                </div>
+	                <div class="row">
+	                  <div class="col-sm-12">
+	                    <div class="form-group"> <button role="button" type="submit" class="btn btn-lg btn-success">отправить комментарий<i class="glyphicon glyphicon-chevron-right"></i></button> </div>
+	                  </div>
+	                </div>
+	              </form>
+              </div>
+			</xpath>
+		</template>
+		
+		<template name="blog_date_tags_section" id="blog_date_tags_section" inherit_id="theme_aditim.blog_inner_page">
+			<xpath expr="//div[@id='datetags']" position="replace">
+				<div id="datetags"> 
+					<span t-field="blog_post_detail.create_date" t-field-options='{"format": "dd MMMM"}'/>
+					<t t-foreach="blog_post_tags" t-as="tags">
+						<a class="btn btn-lg btn-primary" role="button"><t t-esc="tags.name"></t></a> 
+					</t>
+				</div>
+			</xpath>
+		</template>
+		
+		<template name="blog_title_section" id="blog_title_section" inherit_id="theme_aditim.blog_inner_page">
+			<xpath expr="//div[@id='blog_title']" position="replace">
+				<div id="blog_title">
+		            <h2><t t-esc="blog_post_detail.name"></t></h2>
+		            <t t-call="website.publish_management">
+		                <t t-set="object" t-value="blog_post_detail"/>
+		                <t t-set="publish_edit" t-value="True"/>
+		            </t>
+		            <h5><t t-esc="blog_post_detail.description"></t></h5>
+	            </div>
+			</xpath>
+		</template>
+	</data>
+</openerp>

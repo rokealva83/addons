@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+		<record id="crm_case_form_view_leads_inherited" model="ir.ui.view">
+		    <field name="name">CRM.Leads.Form.inherit</field>
+	    	<field name="model">crm.lead</field>
+	    	<field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+	    	<field name="arch" type="xml">
+	    		<xpath expr="//field[@name='user_id']" position="before">
+	    			<field name="position" />
+	    			<field name="need_answer" />
+	    			<field name="interested_category" />
+	    		</xpath>
+		    </field>
+	 	</record>
+    </data>
+</openerp>

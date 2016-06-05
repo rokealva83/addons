@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<record id="product_interior_page_link" model="website.menu">
+			<field name="name">product_interior_aditim</field>
+			<field name="url">/page/product_interior_page</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">78</field>
+		</record>
+		
+		<template name="Aditim | Product Details" id="product_interior_page" page="True">
+			<t t-call="website.layout">
+				<div id="page-top" class="bg-p bg-p1">
+					<header>
+						<nav class="navbar navbar-default">
+						  <div class="container">
+						    <div class="col-md-12 bg-white">
+						      <div class="navbar-header page-scroll">
+						        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+						        <a class="navbar-brand" href="/"><img src="/theme_aditim/static/src/images/logo.png" width="140" height="58" alt="" /></a> </div>
+						      <div class="collapse navbar-collapse padd-40" id="bs-example-navbar-collapse-1">
+						        <ul class="nav navbar-nav navbar-right">
+						          <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+						          <li> <a href="/page/theme_aditim.projects_page">Проекты</a> </li>
+						          <li> <a href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+						          <li> <a class="active" href="/page/website.product_page">продукты</a> </li>
+						          <li> <a href="/page/website.contactus_page">контакты</a> </li>
+						        </ul>
+						      </div>
+						      <div class="search">
+						      	<form t-attf-action="/search_results" method="get" >
+				                    <input type="search" t-att-value="search or ''" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" name="search" class="form-control search-box" maxlength="64" placeholder="энер|" />
+				                    <span id="hide" class="search-box">X</span>
+				                    <span id="show" class="search-btn"><img src="/theme_aditim/static/src/images/search-icon.png" width="12" height="12" alt="" /></span>
+				                    <button type="submit" style="display:none;"></button>
+				                </form>
+						      </div>
+						    </div>
+						  </div>
+						</nav>
+					</header>
+					<div class="container">
+					  <div class="col-sm-12 bg-white">
+
+						<!-- PRODUCT SLIDER SECTION -->
+						<section>
+					      <div class="main-cont">
+					        <div class="col-md-9">
+					          <div class="page-menu">
+					            <ul>
+					              <li><a href="#">aditim</a></li>
+					              <li>/</li>
+					              <li>продукты </li>
+					              <li>/</li>
+					            </ul>
+					          </div>
+					          <div class="prod-con-left">
+					            <h2>Дистанционная рамка Thermix<![CDATA[&reg;]]> Ambitherm<![CDATA[&reg;]]> plus</h2>
+					            <h6>Стандарт «Теплый край»</h6>
+					            <h5>Дистанционная рамка нового поколения Thermix Ambitherm TX.N<![CDATA[&reg;]]> plus производится в Германии с соблюдением высших стандартов качества и отлично проявляет себя в российских климатических условиях.</h5>
+					            <p>Разумное потребление ресурсов без ущерба для комфорта, внимание к окружающей среде и заботу 
+					              об экологии довольно сложно назвать трендом: это стало уже нормой повседневной жизни. Так и пассивные дома из технологии будущего превратились в стандарт современного строительства — 
+					              к сожалению, пока только в развитых странах. </p>
+					            <p>Для практичных европейцев это разумный способ экономии на эксплуатационных расходах, к тому же, эти дома доступны по стоимости строительства.</p>
+					            <div id="carousel">
+					              <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000"> 
+					                <!-- Carousel indicators -->
+					                <ol class="carousel-indicators">
+					                  <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+					                  <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+					                  <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+					                  <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+					                </ol>
+					                <!-- Carousel items -->
+					                <div class="carousel-inner">
+					                  <div class="active item"> <img src="/theme_aditim/static/src/images/product-banner-img01.jpg" alt="" /> </div>
+					                  <div class="item"> <img src="/theme_aditim/static/src/images/product-banner-img02.jpg" alt="" /> </div>
+					                  <div class="item"><img src="/theme_aditim/static/src/images/product-banner-img03.jpg" alt="" /></div>
+					                  <div class="item"><img src="/theme_aditim/static/src/images/product-banner-img04.jpg" alt="" /></div>
+					                </div>
+					              </div>
+					            </div>
+					            <p>Для тех, кто не особо мониторит частые апдейты в портфолио иллюстратора Kerem Beyit, о котором мы вам уже рассказывали, хотим показать свежий материал, который заставит облизываться художников :) Напомним, что Kerem Beyit родился в 1980 году в Турции. Начал рисовать с раннего детства. Поступил на факультет графики, где в течении 4 лет изучал графический дизайн. Художник, о котором вы уже знаете, что он удостоен наград CGSociety, CgChannel, Gfxartist, Cggallery, 3DTotal и CGArena, а также публикуется в журналах, рисует комиксы и персонажи к играм.</p>
+					            <h4>Thermix<![CDATA[&reg;]]> Ambitherm<![CDATA[&reg;]]> plus — это «Теплый край»</h4>
+					            <ul>
+					              <li>Продукция бренда за 13 лет существования на рынке удостоена более 10 престижных наград, одна из них – «Марка №1 в России».</li>
+					              <li>Широкий выбор: стеклянные, пластиковые, металлические электрочайники различных конфигураций и расцветок.</li>
+					              <li>Использование инновационных технологий: функция поддержания температуры и длительного кипячения, электронной регулировки нагрева воды, внутренней подсветки и др.</li>
+					              <li>Доступные цены: электрический чайник из нержавеющей стали или любого иного материала корпуса при достойном качестве исполнения обойдется гораздо дешевле.</li>
+					              <li>Наличие более 350 сервисных центров по всей России и ближнему зарубежью, где производится ремонт и гарантийное обслуживание.</li>
+					            </ul>
+					          </div>
+					        </div>
+					        <div class="col-md-3">
+					          <div class="prod-con-right">
+					            <ul>
+					              <li> <img src="/theme_aditim/static/src/images/pdf-icon.png" width="60" height="60" alt="" />
+					                <h4>Скачать полную презентацию товара</h4>
+					                <span>В формате PDF   2,5 Мб</span> </li>
+					              <li> <img src="/theme_aditim/static/src/images/sall-icon.png" width="60" height="60" alt="" />
+					                <h4>Заказать прайс-лист</h4>
+					                <span>Отправьте заявку и мы предоставим прайс-лист на все интересующие вас продукты</span> </li>
+					            </ul>
+					          </div>
+					        </div>
+					      </div>
+					    </section>
+
+						<!-- PRODUCT CATEGORIES SECTION -->
+						<section>
+					      <div class="pamap">
+					        <h3>Выберите нужный продукт, размер и тип</h3>
+					        <div id="custom_carousel">
+					          <div class="controls">
+					            <ul class="nav">
+					              <li class="active"><a href="#">Дистанционная рамка <br />
+					                Thermix<![CDATA[&reg;]]> Ambitherm<![CDATA[&reg;]]> plus</a></li>
+					              <li><a href="#">Комплектующие для <br />
+					                дистанционной рамки</a></li>
+					              <li><a href="#">Полиамидный профиль <br />
+					                Timberal-Insulbar<![CDATA[&reg;]]></a></li>
+					              <li><a href="#">Термоизолирующие <br />
+					                профили</a></li>
+					              <li><a href="#">Уплотнители <br />
+					                из TPV Foam-Tite</a></li>
+					            </ul>
+					          </div>
+					          <!-- Wrapper for slides -->
+					          <div class="carousel-inner">
+					            <div class="item active">
+					              <div class="row">
+					                <div class="col-sm-3">
+					                  <div class="pamap-left">
+					                    <ul>
+					                      <li><a href="#">10 MM</a></li>
+					                      <li><a href="#">12 мм</a></li>
+					                      <li><a href="#">13,4 мм</a></li>
+					                      <li><a href="#">13,5 мм</a></li>
+					                      <li><a href="#">14 мм</a></li>
+					                      <li><a href="#">14,6 мм</a></li>
+					                      <li><a href="#">14,8 мм</a></li>
+					                      <li><a href="#">15 мм</a></li>
+					                      <li><a href="#">16 мм</a></li>
+					                      <li><a href="#">17 мм</a></li>
+					                      <li><a href="#">18 мм</a></li>
+					                      <li><a href="#">18,6 мм</a></li>
+					                      <li><a href="#">20 мм</a></li>
+					                      <li><a href="#">21 мм</a></li>
+					                      <li><a href="#">23,9 мм</a></li>
+					                      <li><a href="#">22 мм</a></li>
+					                      <li><a class="active" href="#">24 мм</a></li>
+					                      <li><a href="#">25 мм</a></li>
+					                      <li><a href="#">26 мм</a></li>
+					                      <li><a href="#">27 мм</a></li>
+					                      <li><a href="#">28 мм</a></li>
+					                      <li><a href="#">30 мм</a></li>
+					                      <li><a href="#">31,8 мм</a></li>
+					                      <li><a href="#">31,9 мм</a></li>
+					                      <li><a href="#">32 мм</a></li>
+					                      <li><a href="#">34 мм</a></li>
+					                      <li><a href="#">35 мм</a></li>
+					                      <li><a href="#">36 мм</a></li>
+					                      <li><a href="#">42 мм</a></li>
+					                      <li><a href="#">44 мм</a></li>
+					                      <li><a href="#">Для раздвижных систем</a></li>
+					                      <li><a href="#">Для оконного блока</a></li>
+					                      <li><a href="#">Противопожарный</a></li>
+					                      <li><a href="#">Для фурнитуры</a></li>
+					                    </ul>
+					                  </div>
+					                </div>
+					                <div class="col-sm-9">
+					                  <div class="pamap-right">
+					                    <ul>
+					                      <li> <a href="#" data-toggle="modal" data-target=".pop-up-1"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li><a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                      <li> <a href="#"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /> </a>
+					                        <p>24 мм, I-тип, сложная геометрия</p>
+					                        <span>Артикул 100.186</span> </li>
+					                    </ul>
+					                    <p><a class="btn btn-lg btn-success" href="#" role="button">заказать прайс-лист<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					                  </div>
+					                </div>
+					              </div>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					    </section>
+
+						<!-- PRODUCT CASES -->
+						<section>
+					      <div class="pro-con-bott">
+					        <div class="col-md-4"> <img src="/theme_aditim/static/src/images/prod-con-bott-img.png" alt="" />
+					          <h3>Гибкие термовставкиTimberal-Insulbar<![CDATA[&reg;]]></h3>
+					          <p>Комбинированный оконный профиль специально изгибали для получения радиуса в углах, при этом термовставка разрушалась, появлялась трещина, которую приходилось замазывать чем-то, либо браковать заготовку, как в случае использования в форточке… Самостоятельно специалисты компании придумали временное решение-проблемы – приготовление заготовки на столе с подогревом.</p>
+					          <span><a role="button" href="#" class="btn btn-lg btn-success">мы нашли решение<i class="glyphicon glyphicon-chevron-right"></i> </a></span> </div>
+					        <div class="col-md-4"> <img src="/theme_aditim/static/src/images/prod-con-bott-img.png" alt="" />
+					          <h3>Показатель приведенного сопротивления теплопередачи — каким он должен быть и как его достичь?</h3>
+					          <p>Сейчас на Российском рынке до сих пор используются профильные алюминиевые системы, которые были разработаны десять лет назад и уже не могут отвечать современным требованиям по энергоэффективности. Эти требования регламентируются значением приведенного сопротивление теплопередачи. Показатель приведенного сопротивление теплопередачи, каким он должен быть?</p>
+					          <span><a role="button" href="#" class="btn btn-lg btn-success">мы нашли решение<i class="glyphicon glyphicon-chevron-right"></i> </a></span> </div>
+					        <div class="col-md-4"> <img src="/theme_aditim/static/src/images/prod-con-bott-img.png" alt="" />
+					          <h3>Улучшение теплопередачи светопрозрачных конструкций</h3>
+					          <p>К нам обратилась компания-производитель стеклопакетов, в ассортименте которой была профильная система с коэффициентом сопротивления теплопередаче равным 0,31 м2K/Вт, с просьбой провести ее модернизацию и существенно повысить данный параметр.</p>
+					          <small>Компания: Montblanc</small> <span><a role="button" href="#" class="btn btn-lg btn-success">мы нашли решение<i class="glyphicon glyphicon-chevron-right"></i> </a></span> </div>
+					      </div>
+					    </section>
+
+						<!-- BLOG PROJECT SECTION -->
+						<section>
+					      <div class="hidden-xs blog-prod">
+					        <div class="col-sm-5">
+					          <h3><a href="/page/theme_aditim.blog_aggregator_page" class="hlink">блог</a></h3>
+					          <a href="/page/theme_aditim.blog_aggregator_page" class="plink"><p>Если вы работаете в отрасли энергоэффективного строительства или просто интересуетесь этой темой, вам будет интересно.</p></a>
+					          <p><a role="button" href="/page/theme_aditim.blog_aggregator_page" class="btn btn-lg btn-success">читать<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					        <div class="col-sm-1">&#160;</div>
+					        <div class="col-sm-6">
+					          <h3><a href="/page/theme_aditim.projects_page" class="hlink">Проекты</a></h3>
+					          <a href="/page/theme_aditim.projects_page" class="plink"><p>Мы думаем не только о технической стороне дела, но и о вашем бизнесе: по-настоящему эффективным может быть только оптимальное по цене решение. Ищете именно такое? </p></a>
+					          <p><a role="button" href="/page/theme_aditim.projects_page" class="btn btn-lg btn-success">реализованные проекты<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					      </div>
+					    </section>
+					  </div>
+					</div>
+					
+					<!-- 	Page Footer -->
+					<footer>
+					  <div class="container">
+					    <div class="col-sm-12">
+					      <div class="footer-left">
+					        <p>Россия, 115088, г. Москва, ул. Угрешская. д. 2, стр. 6, 3 этаж</p>
+					        <span>+7 (495) 105-90-95</span> <span><a role="button" href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target=".contact-form-2">напишите нам! </a></span> <span><a role="button" href="/page/website.contactus_page" class="btn btn-lg btn-primary btnn">как нас найти? </a></span> </div>
+					      <div class="footer-right"> <span><![CDATA[&copy;]]> 2015 ООО «Адитим»</span> </div>
+					    </div>
+					  </div>
+					</footer>
+					
+					<!-- pop 1 start-->
+					<div class="modal fade pop-up-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+					  <div class="modal-dialog modal-lg">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					      </div>
+					      <div class="modal-body">
+					        <div class="modal-main">
+					          <div class="col-sm-6"><img src="/theme_aditim/static/src/images/prod-right-img.jpg" alt="" /></div>
+					          <div class="col-sm-6">
+					            <h3>Полиамидный профиль Timberal-Insulbar<![CDATA[&reg;]]>, 24 мм, I-тип, сложная геометрия</h3>
+					            <span>Артикул 100.186</span> <span><a class="btn btn-lg btn-success" data-toggle="modal" data-target=".pop-up-2" href="#" role="button">заказать прайс-лист<i class="glyphicon glyphicon-chevron-right"></i> </a></span> </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<!-- pop 1 end--> 
+					
+					<!-- pop 2 stat -->
+					<div class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+					  <div class="modal-dialog modal-lg">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					        <h4 class="modal-title" id="myLargeModalLabel-2">напишите нам! <img src="/theme_aditim/static/src/images/pop-up-top-img.png" alt="" /></h4>
+					      </div>
+					      <div class="modal-body">
+					        <div class="centered-form">
+					          <div class="col-sm-12">
+					            <div class="panel panel-default">
+					              <div class="panel-body">
+					                <form role="form">
+					                  <div class="row">
+					                    <div class="col-sm-6">
+					                      <div class="form-group">
+					                        <label><span>*</span> Ваше имя:</label>
+					                        <input type="text" name="first_name" id="first_name" class="form-control input-sm" />
+					                        <label><span>*</span>Электронная почта:</label>
+					                        <input type="text" name="first_name" id="first_name" class="form-control input-sm" />
+					                        <label>Название организации:</label>
+					                        <input type="text" name="first_name" id="first_name" class="form-control input-sm" />
+					                      </div>
+					                    </div>
+					                    <div class="col-sm-6">
+					                      <div class="form-group">
+					                        <label>Ваш город:</label>
+					                        <input type="text" name="last_name" id="last_name" class="form-control input-sm" />
+					                        <label><span>*</span> Номер телефона:</label>
+					                        <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="+7 (___) ___-__-__" />
+					                        <label>Ваша должность:</label>
+					                        <select class="form-control">
+					                          <option>Снабженец</option>
+					                          <option>Снабженец 2</option>
+					                          <option>Снабженец 3</option>
+					                          <option>Снабженец 4</option>
+					                          <option>Снабженец 5</option>
+					                        </select>
+					                      </div>
+					                    </div>
+					                  </div>
+					                  <div class="row">
+					                    <div class="col-sm-12">
+					                      <div class="form-group">
+					                        <p>Вы можете указать детали, которые могут повлиять на стоимость, и мы подготовим для вас персональное предложение. Получится чуть дольше, чем составление стандартного предложения, но в конечном счете мы сэкономим вам больше времени.</p>
+					                        <label>Важные уточнения:</label>
+					                        <textarea class="form-control" rows="3"></textarea>
+					                        <div class="captcha">
+					                          <div class="captcha-left">
+					                            <label><span>*</span> 1 + 17 =</label>
+					                            <input type="text" name="last_name" id="last_name" class="form-control input-sm" />
+					                          </div>
+					                          <div class="captcha-right">
+					                            <label>Мы хотим убедиться, что вы не робот, и что вы не забыли школьную арифметику :)</label>
+					                          </div>
+					                        </div>
+					                        <a class="btn btn-lg btn-success" href="#" role="button">отправить сообщение</a>
+					                        <label><span>*</span> — поля, обязательные для заполнения</label>
+					                      </div>
+					                    </div>
+					                  </div>
+					                </form>
+					              </div>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<!-- pop 2 end -->
+					
+				</div>
+			</t>
+		</template>
+	</data>
+</openerp>

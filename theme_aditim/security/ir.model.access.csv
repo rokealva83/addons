@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_blog_post_user,blog.post.user,model_blog_post,base.group_aditim,1,1,1,1
+access_product_category_user,product.category.user,model_product_category,base.group_aditim,1,1,1,1
+access_mail_message_user,mail.message.user,model_mail_message,base.group_aditim,1,1,1,1
+access_case_category_user,case.category.user,model_case_category,base.group_aditim,1,1,1,1
+access_case_post_user,case.post.user,model_case_post,base.group_aditim,1,1,1,1

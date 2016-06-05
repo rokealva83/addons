@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="base.group_aditim" model="res.groups">
+            <field name="name">Aditim_group</field>
+            <field name="comment">The user will have access to his approving the Product from the R&amp;D Side.</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_no_one'))]"/>
+        </record>
+    </data>
+</openerp>

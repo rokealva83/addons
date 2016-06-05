@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<record id="main_home_page_link" model="website.menu">
+			<field name="name">contactus_aditim</field>
+			<field name="url">/page/contactus_page</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">80</field>
+		</record>
+		
+		<template name="Aditim | Contactus" id="website.contactus_page" page="True">
+			<t t-call="website.layout">
+				<nav class="pushy pushy-left">
+			        <ul>
+			            <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+				          <li> <a href="/page/theme_aditim.projects_page">Проекты</a> </li>
+				          <li> <a href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+				          <li> <a href="/page/website.product_page">продукты</a> </li>
+				          <li> <a class="active" href="/page/website.contactus_page">контакты</a> </li>
+			        </ul>
+			    </nav>
+			    <div class="site-overlay"></div>
+				<div id="container" class="bg-p cont-bg">
+				<div class="menu-btn"><img src="/theme_aditim/static/src/images/mob-menu-butt.png" width="12" height="10" alt="" /></div>
+					<header>
+						<nav class="navbar navbar-default">
+				            <div class="container bg-white">
+				                <div class="col-md-3 navbar-header page-scroll menu-fix-mob">
+				                    <button type="button" class="navbar-toggle hidden-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				                    <a class="navbar-brand" href="/"><img src="/theme_aditim/static/src/images/logo.png" width="140" height="58" alt="" /></a>
+				                </div>
+				                <div class="col-md-9 menu-fix-mob">
+				                    <div class="collapse navbar-collapse padd-45 hidden-xs" id="bs-example-navbar-collapse-1">
+				                        <ul class="nav navbar-nav navbar-right">
+				                              <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+											  <li> <a href="/page/theme_aditim.projects_page">Проекты</a> </li>
+											  <li> <a href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+											  <li> <a href="/page/website.product_page">продукты</a> </li>
+											  <li> <a class="active" href="/page/website.contactus_page">контакты</a> </li>
+				                        </ul>
+				                    </div>
+				                    <div class="search">
+				                    	<form t-attf-action="/search_results" method="get" >
+						                    <input type="search" t-att-value="search or ''" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" name="search" class="form-control search-box" maxlength="64" placeholder="энер|" />
+						                    <span id="hide" class="search-box">X</span>
+						                    <span id="show" class="search-btn"><img src="/theme_aditim/static/src/images/search-icon.png" width="12" height="12" alt="" /></span>
+						                    <button type="submit" style="display:none;"></button>
+						                </form>
+				                    </div>
+				                </div>
+				            </div>
+				        </nav>
+					</header>
+					<div class="container bg-white">
+					  <div class="col-md-12 bg-white">
+
+						<!-- SEND MESSAGE SECTION -->
+						<section>
+					      <div class="cont-top">
+					        <p>Отправьте нам сообщение, и мы свяжемся с вами как можно скорее!</p>
+					        <a class="btn btn-lg btn-success" href="#" data-toggle="modal" data-target=".contact-form-2">отправить сообщение<i class="glyphicon glyphicon-chevron-right"></i> </a>
+					        <p>Или приезжайте к нам в офис:</p>
+					        <address>
+					        Россия, 115088, г. Москва, ул. Угрешская. д. 2, стр. 6, 3 этаж
+					        +7 (495) 105-90-95   / <a href="mailto:info@aditim.ru">info@aditim.ru</a>
+					        </address>
+					        <div id="firstMap" class="map1"></div>
+					        <p>Не у всех получается найти нас сразу, поэтому для вашего удобства — схема проезда по территории:</p>
+					        <div id="secondMap" class="map2"></div></div>
+					    </section>			
+
+						<!-- OUR STORES SECTION -->
+						<section>
+					      <div class="cont-bott">
+					        <h3>наши склады</h3>
+					        <ul>
+					          <li class="page-scroll">
+					            <p>Житнево</p>
+					            <address>
+					            <a id="firstAddress" href="#thirdMap">Московская обл., городской округ Домодедово, Житнево дер., стр. 101д</a>
+					            </address>
+					            <span>+7 (123) 123-4567</span>
+					            <p>Зав. складом: Юрий Поликарпов</p>
+					          </li>
+					          <li class="page-scroll">
+					            <p>Екатеринбург</p>
+					            <address>
+					            <a id="secondAddress" href="#thirdMap">Свердловская область, г. Арамиль, пер. Речной, 2А</a>
+					            </address>
+					            <span>+7 (123) 123-4567</span>
+					            <p>Зав. складом: Каравайкина Екатерина</p>
+					          </li>
+					          <li class="page-scroll">
+					            <p>Ульяновск</p>
+					            <address>
+					            <a id="thirdAddress" href="#thirdMap">г. Ульяновск, 9-ый Инженерный пр-д, 30</a>
+					            </address>
+					            <span>+7 (123) 123-4567</span>
+					            <p>Зав. складом: Денисова Галина</p>
+					          </li>
+					          <li class="page-scroll">
+					            <p>Челябинск</p>
+					            <address>
+					            <a id="fourthAddress" href="#thirdMap">Челябинская обл, г. Челябинск, ул. Механическая, 40</a>
+					            </address>
+					            <span>+7 (123) 123-4567</span>
+					            <p>Зав. складом: Нечеухина Надежда Васильевна</p>
+					          </li>
+					        </ul>
+					        <div id="thirdMap" class="map3"></div> </div>
+					    </section>
+
+						<!-- BLOG-PROJECT SECTION -->
+						<section>
+					      <div class="blog-prod">
+					        <div class="col-sm-5">
+					          <h3><a href="/page/theme_aditim.blog_aggregator_page" class="hlink">блог</a></h3>
+					          <a href="#" class="plink"><p>Если вы работаете в отрасли энергоэффективного строительства или просто интересуетесь этой темой, вам будет интересно.</p></a>
+					          <p><a role="button" href="/page/theme_aditim.blog_aggregator_page" class="btn btn-lg btn-success">читать<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					        <div class="col-sm-1">&#160;</div>
+					        <div class="col-sm-6">
+					          <h3><a href="/page/theme_aditim.projects_page" class="hlink">Проекты</a></h3>
+					          <a href="/page/theme_aditim.projects_page" class="plink"><p>Мы думаем не только о технической стороне дела, но и о вашем бизнесе: по-настоящему эффективным может быть только оптимальное по цене решение. Ищете именно такое? </p></a>
+					          <p><a role="button" href="/page/theme_aditim.projects_page" class="btn btn-lg btn-success">реализованные проекты<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					      </div>
+					    </section>
+					  </div>
+					</div>
+					
+					<footer>
+					  <div class="container">
+					    <div class="row">
+					      <div class="col-md-3">&#160;</div>
+					      <div class="col-md-9">
+					        <div class="footer-left">
+					          <p>Россия, 115088, г. Москва, ул. Угрешская. д. 2, стр. 6, 3 этаж</p>
+					          <span>+7 (495) 105-90-95</span> <span><a role="button" href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target=".contact-form-2">напишите нам! </a></span> <span><a role="button" href="/page/website.contactus_page" class="btn btn-lg btn-primary">как нас найти? </a></span> </div>
+					        <div class="footer-right"> <span><![CDATA[&copy;]]> 2015 ООО «Адитим»</span> </div>
+					      </div>
+					    </div>
+					  </div>
+					</footer>
+				</div>
+			</t>
+		</template>
+	</data>
+</openerp>

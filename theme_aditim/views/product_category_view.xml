@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <record model="ir.ui.view" id="inherit_product_category_form_view">
+            <field name="name">Inherit.product.category.form.view</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="account.view_category_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_expense_categ']" position="after">
+                    <field name="attachment_ids" widget="many2many_binary"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

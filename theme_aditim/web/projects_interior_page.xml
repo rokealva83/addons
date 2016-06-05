@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<record id="projects_interior_page_link" model="website.menu">
+			<field name="name">projects_interior_aditim</field>
+			<field name="url">/page/projects_interior_page</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">85</field>
+		</record>
+		
+		<template name="Aditim | Projects Detail" id="projects_interior_page" page="True">
+			<t t-call="website.layout">
+				<nav class="pushy pushy-left">
+			        <ul>
+			            <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+				          <li> <a class="active" href="/page/theme_aditim.projects_page">Проекты</a> </li>
+				          <li> <a href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+				          <li> <a href="/page/website.product_page">продукты</a> </li>
+				          <li> <a href="/page/website.contactus_page">контакты</a> </li>
+			        </ul>
+			    </nav>
+			    <div class="site-overlay"></div>
+				<div id="container" class="bg-p bg-p1 proj-bg">
+					<div class="menu-btn"><img src="/theme_aditim/static/src/images/mob-menu-butt.png" width="12" height="10" alt="" /></div>
+					<header>
+					    <nav class="navbar navbar-default">
+				            <div class="container bg-white">
+				                <div class="col-md-3 navbar-header page-scroll menu-fix-mob">
+				                    <button type="button" class="navbar-toggle hidden-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				                    <a class="navbar-brand" href="/"><img src="/theme_aditim/static/src/images/logo.png" width="140" height="58" alt="" /></a>
+				                </div>
+				                <div class="col-md-9 menu-fix-mob">
+				                    <div class="collapse navbar-collapse padd-45 hidden-xs" id="bs-example-navbar-collapse-1">
+				                        <ul class="nav navbar-nav navbar-right">
+				                              <li> <a href="/page/website.aboutus_page">О нас и о вас</a> </li>
+											  <li> <a class="active" href="/page/theme_aditim.projects_page">Проекты</a> </li>
+											  <li> <a href="/page/theme_aditim.blog_aggregator_page">Блог</a> </li>
+											  <li> <a href="/page/website.product_page">продукты</a> </li>
+											  <li> <a href="/page/website.contactus_page">контакты</a> </li>
+				                        </ul>
+				                    </div>
+				                    <div class="search">
+				                    	<form t-attf-action="/search_results" method="get" >
+						                    <input type="search" t-att-value="search or ''" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" name="search" class="form-control search-box" maxlength="64" placeholder="энер|" />
+						                    <span id="hide" class="search-box">X</span>
+						                    <span id="show" class="search-btn"><img src="/theme_aditim/static/src/images/search-icon.png" width="12" height="12" alt="" /></span>
+						                    <button type="submit" style="display:none;"></button>
+						                </form>
+				                    </div>
+				                </div>
+				            </div>
+				        </nav>
+					</header>
+					<div class="container bg-white">
+					  <div class="col-sm-12 bg-white">
+						<!-- DETAIL CASE SECTION -->
+						<section>
+					      <div id="detail_case" class="main-cont">
+					      	
+					      </div>
+					    </section>
+
+						<!-- CASE DECISION SECTION -->
+						<section>
+					      <div id="case_decision" class="proj-con">
+					      	
+					      </div>
+					    </section>
+
+						<!-- CASE COMMENT SECTION -->
+						<section>
+					      <div class="pro-con-bott proj-cona">
+					        <div class="quoteb">
+					        	<div id="comments">
+									<!-- 	project comments -->
+					          	</div>
+					          	<div id="comment_form">
+									<!-- 	comment form section -->
+					            </div>
+					        </div>
+					      </div>
+					    </section>
+
+						<!-- THREE POPULAR CASES -->
+						<section>
+					      <div id="three_random" class="pro-con-bott proj-conb">
+					      </div>
+					    </section>
+
+						<!-- BLOG-PROJECT SECTION -->
+						<section>
+					      <div class="blog-prod blog-prod-new">
+					        <div class="col-sm-5">
+					          <h3><a href="/page/theme_aditim.blog_aggregator_page" class="hlink">блог</a></h3>
+					          <a href="#" class="plink"><p>Если вы работаете в отрасли энергоэффективного строительства или просто интересуетесь этой темой, вам будет интересно.</p></a>
+					          <p><a role="button" href="/page/theme_aditim.blog_aggregator_page" class="btn btn-lg btn-success">читать<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					        <div class="col-sm-1">&#160;</div>
+					        <div class="col-sm-6">
+					          <h3><a href="/page/theme_aditim.projects_page" class="hlink">Проекты</a></h3>
+					          <a href="/page/theme_aditim.projects_page" class="plink"><p>Мы думаем не только о технической стороне дела, но и о вашем бизнесе: по-настоящему эффективным может быть только оптимальное по цене решение. Ищете именно такое? </p></a>
+					          <p><a role="button" href="/page/theme_aditim.projects_page" class="btn btn-lg btn-success">реализованные проекты<i class="glyphicon glyphicon-chevron-right"></i> </a></p>
+					        </div>
+					      </div>
+					    </section>
+					  </div>
+					</div>
+					<footer>
+					  <div class="container">
+					    <div class="col-sm-12">
+					      <div class="footer-left">
+					        <p>Россия, 115088, г. Москва, ул. Угрешская. д. 2, стр. 6, 3 этаж</p>
+					        <span>+7 (495) 105-90-95</span> <span><a role="button" href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target=".contact-form-2">напишите нам! </a></span> <span><a role="button" href="/page/website.contactus_page" class="btn btn-lg btn-primary">как нас найти? </a></span> </div>
+					      <div class="footer-right"> <span><![CDATA[&copy;]]> 2015 ООО «Адитим»</span> </div>
+					    </div>
+					  </div>
+					</footer>
+				</div>
+				
+				<!-- pop 2 stat -->
+				<div id="form_popup" class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				      </div>
+				      <div class="modal-body">
+				        <div class="centered-form">
+				          <div class="col-sm-12">
+				            <div class="panel panel-default">
+				              <div class="panel-body">
+				                <form id="authentication_form" role="form" t-attf-action="/contact/authform/#{ slug(case_posts) }">
+				                  <div class="row">
+				                    <div class="col-sm-12">
+				                      <div class="form-group">
+				                        <p>Вы можете указать детали, которые могут повлиять на стоимость, и мы подготовим для вас персональное предложение. Получится чуть дольше, чем составление стандартного предложения, но в конечном счете мы сэкономим вам больше времени.</p>
+				                        <label><span>*</span> Ваше имя:</label>
+				                        <input type="text" name="last_name" id="last_name" class="form-control input-sm" required="required"/>
+				                        <label><span>*</span> Электронная почта:</label>
+				                        <input type="email" name="email" id="email" class="form-control input-sm" required="required"/>
+										  <input type="hidden" name="url" id="url"/>
+				                       <!-- <a class="btn btn-lg btn-success" href="#" role="button">Получить доступ к документу</a>-->
+				                       <button id="authenticationform" type="submit" class="btn btn-lg btn-success" role="button">Получить доступ к документу</button>
+				                         <label><span>*</span> — поля, обязательные для заполнения</label>
+				                        <label style="margin-top:0; line-height:10px;">Мы не рассылаем спам и коммерческие предложения, о которых вы не просили.</label>
+				                      </div>
+				                    </div>
+				                  </div>
+				                </form>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</t>
+		</template>
+		<template name="projects_three_random_cases" id="projects_three_random_cases" inherit_id="theme_aditim.projects_interior_page">
+			<xpath expr="//div[@id='three_random']" position="replace">
+				<div t-if="three_random_cases" id="three_random" class="pro-con-bott proj-conb">
+					<t t-foreach="three_random_cases" t-as="a">
+				        <div class="col-md-4"> <img src="/theme_aditim/static/src/images/prod-con-bott-img.png" alt="" />
+				          <h3><t t-esc="a.name"></t></h3>
+				            <p><t t-esc="a.description"></t></p>
+				            <small t-if="a.company">Компания: <t t-esc="a.company"></t></small> 
+				          <span><a role="button" t-attf-href="/page/#{ slug(a.case_cat_id) }/case/#{ slug(a) }" class="btn btn-lg btn-success">мы нашли решение<i class="glyphicon glyphicon-chevron-right"></i> </a></span> </div>
+		          	</t>
+			      </div>
+			</xpath>
+		</template>
+		<template name="projects_comment_display_section" id="projects_comment_display_section" inherit_id="theme_aditim.projects_interior_page">
+			<xpath expr="//div[@id='comments']" position="replace">
+				<div id="comments">
+		          <t t-if="len(case_comments) &gt; 0">
+			           <h3>комментарии</h3>
+			           <t t-foreach="case_comments" t-as="comment">
+				           <h5><t t-esc="comment.organization_name"></t> <small t-field="comment.create_date" t-field-options='{"format": "dd MMM yyyy"}'/><small> в </small><small t-field="comment.create_date" t-field-options='{"format": "hh:mm"}'/></h5>
+				           <p><t t-esc="comment.comment_text"></t></p>
+			           </t>
+		           </t>
+	          	</div>
+			</xpath>
+		</template>
+		<template name="projects_comment_form_section" id="projects_comment_form_section" inherit_id="theme_aditim.projects_interior_page">
+			<xpath expr="//div[@id='comment_form']" position="replace">
+				<div id="comment_form">
+				  <form id="comment" class="quotec" t-attf-action="/casepost/comment/#{ slug(case_posts) }" role="form">
+		            <div class="row">
+		              <div class="col-sm-12">
+		                <h3>Добавить комментарий</h3>
+		                <label>Важные уточнения:</label>
+		                <textarea rows="3" id="case_comment" name="case_comment" class="form-control" required="required"></textarea>
+		              </div>
+		              <div class="col-sm-5">
+		                <div class="form-group">
+		                  <label>Ваше имя:</label>
+		                  <input type="text" class="form-control input-sm" id="your_name" name="your_name" required="required" />
+		                </div>
+		              </div>
+		              <div class="col-sm-5">
+		                <div class="form-group">
+		                  <label>Электронная почта:</label>
+		                  <input type="email" class="form-control input-sm" id="pemail" name="pemail" required="required" />
+		                </div>
+		              </div>
+		              <div class=" col-xs-4 col-sm-2">
+		                <div class="captcha">
+		                  <label id="num1"></label> <label>+</label> <label id="num2"></label> <label>=</label>
+		                  <input type="text" id="total" autocomplete="off" class="form-control input-sm" name="captch" required="required" />
+		                </div>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="col-sm-12">
+		                <div class="form-group"> <button type="submit" class="btn btn-lg btn-success" role="button">отправить комментарий<i class="glyphicon glyphicon-chevron-right"></i></button> </div>
+		              </div>
+		            </div>
+		          </form>
+		       </div>
+			</xpath>
+		</template>
+
+		<template name="project_detail_section" id="project_detail_section" inherit_id="theme_aditim.projects_interior_page">
+			<xpath expr="//div[@id='detail_case']" position="replace">
+				<div id="detail_case" class="main-cont">
+			        <div class="col-md-9">
+			          <div class="page-menu">
+			            <ul>
+			              <li><a href="#">aditim</a></li>
+			              <li>/</li>
+			              <li>проекты</li>
+			              <li>/</li>
+			            </ul>
+			          </div>
+			          <div class="prod-con-left">
+			            <h2><t t-esc="case_posts.name"></t></h2>
+			            <t t-call="website.publish_management">
+			                <t t-set="object" t-value="case_posts"/>
+			                <t t-set="publish_edit" t-value="True"/>
+			            </t>
+			            <h6 t-if="case_posts.company">Компания: <t t-esc="case_posts.company"></t></h6>
+			            <div id="case_content" t-field="case_posts.content" />
+			          </div>
+			        </div>
+			        <div class="col-md-3">
+			          <div class="prod-con-right">
+			            <ul>
+							<t t-foreach="case_posts.cases_attachment_ids" t-as="one_attachment">
+								<span t-if="one_attachment.mimetype=='application/pdf'">
+									<li>
+										<div class="pdf-img"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+									<a t-attf-href="/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4></a>
+										<span>В формате PDF <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+
+								<span t-if="one_attachment.mimetype=='application/msword'">
+									<li>
+										<div class="list-icon"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+									<a t-attf-href="/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4> </a>
+										<span>В формате DOC <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+
+								<span t-if="one_attachment.mimetype=='application/vnd.openxmlformats-officedocument.wordprocessingml.document'">
+									<li>
+										<div class="list-icon"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+									<a t-attf-href="/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4></a>
+										<span>В формате DOC <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+
+								<span t-if="one_attachment.mimetype=='application/zip'">
+									<li>
+										<div class="rar-file"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+									<a t-attf-href="/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4></a>
+										<span>В формате ZIP <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+
+								<span t-if="one_attachment.mimetype=='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'">
+									<li>
+										<div class="pdf-download"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+									<a t-attf-href="/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4></a>
+										<span>В формате XLS <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+							</t>
+			            </ul>
+			          </div>
+			        </div>
+			      </div>
+			</xpath>
+		</template>
+
+		<template name="project_decision_section" id="project_decision_section" inherit_id="theme_aditim.projects_interior_page">
+			<xpath expr="//div[@id='case_decision']" position="replace">
+			   <div id="case_decision" class="proj-con">
+		        <div class="proj-con-left">
+		          <div id="case_decision_content" t-field="case_posts.content_decision" />
+		          <t t-foreach="case_tags" t-as="tags">
+					<a class="btn btn-lg btn-primary" role="button"><t t-esc="tags.name"></t></a> 
+				  </t>
+		        </div>
+		        <div class="proj-con-right">
+		          <div class="visible-md visible-lg"><img src="/theme_aditim/static/src/images/pop-up-top-img.png" alt="" /></div>
+		          <ul>
+					  <t t-foreach="case_posts.decision_attachment_ids" t-as="one_attachment">
+								<span t-if="one_attachment.mimetype=='application/pdf'">
+									<li>
+									<!--<a t-attf-href="http://localhost:8069/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										 <img src="/theme_aditim/static/src/images/pdf-icon.png" alt="" /><br/>
+										&lt;!&ndash;<h4>Скачать полную презентацию товара</h4>&ndash;&gt;
+										<span><t t-esc="one_attachment.name"> </t></span> </a>-->
+										<div class="pdf-img"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+										<a role="button" href="#" t-attf-onclick="openAuthPopup('{{one_attachment.id}}','{{one_attachment.name}}',this)" data-target=".pop-up-2" data-toggle="modal">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4></a>
+										<span>В формате PDF <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+
+								<span t-if="one_attachment.mimetype=='application/msword'">
+									<li>
+									<!--<a t-attf-href="http://localhost:8069/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										 <img src="/theme_aditim/static/src/images/list-icon.png" alt="" /><br/>
+										&lt;!&ndash;<h4>Скачать полную презентацию товара</h4>&ndash;&gt;
+										<span><t t-esc="one_attachment.name"> </t></span> </a>-->
+										<div class="list-icon"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+										<a role="button" href="#" t-attf-onclick="openAuthPopup('{{one_attachment.id}}','{{one_attachment.name}}',this)" data-target=".pop-up-2" data-toggle="modal">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4></a>
+										<span>В формате DOC <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+								<span t-if="one_attachment.mimetype=='application/vnd.openxmlformats-officedocument.wordprocessingml.document'">
+									<li>
+									<!--<a t-attf-href="http://localhost:8069/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										 <img src="/theme_aditim/static/src/images/list-icon.png" alt="" /><br/>
+										&lt;!&ndash;<h4>Скачать полную презентацию товара</h4>&ndash;&gt;
+										<span><t t-esc="one_attachment.name"> </t></span> </a>-->
+										<div class="list-icon"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+										<a role="button" href="#" t-attf-onclick="openAuthPopup('{{one_attachment.id}}','{{one_attachment.name}}',this)" data-target=".pop-up-2" data-toggle="modal">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4></a>
+										<span>В формате DOC <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+								<span t-if="one_attachment.mimetype=='application/zip'">
+									<li>
+									<!--<a t-attf-href="http://localhost:8069/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										 <img src="/theme_aditim/static/src/images/rar-file-icon.png" alt="" /><br/>
+										&lt;!&ndash;<h4>Скачать полную презентацию товара</h4>&ndash;&gt;
+										<span><t t-esc="one_attachment.name"> </t></span> </a>-->
+										<div class="rar-file"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+										<a role="button" href="#" t-attf-onclick="openAuthPopup('{{one_attachment.id}}','{{one_attachment.name}}',this)" data-target=".pop-up-2" data-toggle="modal">
+										<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4>
+										<span>В формате ZIP <t t-esc="mb_size"></t> Мб </span>
+										</a>
+									</li>
+								</span><br/>
+								<span t-if="one_attachment.mimetype=='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'">
+									<li>
+									<!--<a t-attf-href="http://localhost:8069/web/binary/saveas?model=ir.attachment&amp;field=datas&amp;filename_field=datas_fname&amp;id=#{one_attachment.id}" title="one_attachment.name">
+										 <img src="/theme_aditim/static/src/images/pdf-download-icon.png" alt="" /><br/>
+										<span><t t-esc="one_attachment.name"> </t></span> </a>-->
+										<div class="pdf-download"></div>
+										<t t-set="mb_size" t-value="(one_attachment.file_size)/1024"></t>
+										<a role="button" href="#" t-attf-onclick="openAuthPopup('{{one_attachment.id}}','{{one_attachment.name}}',this)" data-target=".pop-up-2" data-toggle="modal">
+											<h4><font>скачать <t t-esc="one_attachment.name"> </t></font></h4></a>
+										<span>В формате XLS <t t-esc="mb_size"></t> Мб </span>
+									</li>
+								</span><br/>
+					 </t>
+		          </ul>
+		        </div>
+		     </div>
+		    </xpath>
+		</template>
+	</data>
+</openerp>

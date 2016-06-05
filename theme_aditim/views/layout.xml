@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<!-- 		Remove Website Page header and footer -->
+		<template id="website_header_inherit" inherit_id="website.layout" name="website_header_inherit">
+			<xpath expr="//div[@id='wrapwrap']/header" position="replace">
+			</xpath>
+			<xpath expr="//div[@id='wrapwrap']/footer" position="replace">
+			</xpath>
+			<xpath expr="//div[@id='wrapwrap']" position="after">
+				<!-- pop 2 start -->
+				<div class="modal fade contact-form-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+				  <div class="modal-dialog modal-lg">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				        <h4 class="modal-title" id="myLargeModalLabel-2">напишите нам! <img src="/theme_aditim/static/src/images/pop-up-top-img.png" alt="" /></h4>
+				      </div>
+				      <div class="modal-body">
+				        <div class="centered-form">
+				          <div class="col-sm-12">
+				            <div class="panel panel-default">
+				              <div class="panel-body">
+				                <form id="contact_form" role="form" action="/contact/secondform">
+				                  <div class="row">
+				                    <div class="col-sm-12">
+				                      <label><span>*</span>Ваше имя:</label>
+				                      <input type="text" name="your_name" id="your_name" class="form-control input-sm" required="required"/>
+				                    </div>
+				                    <div class="col-sm-6">
+				                      <div class="form-group">
+				                        <label><span>*</span> Электронная почта:</label>
+				                        <input type="email" name="email" id="email" class="form-control input-sm" required="required"/>
+				                        <label>Название организации:</label>
+				                        <input type="text" name="org_name" id="org_name" class="form-control input-sm" />
+				                        <label>Ваш город:</label>
+				                        <input type="text" name="your_city" id="your_city" class="form-control input-sm" />
+				                      </div>
+				                    </div>
+				                    <div class="col-sm-6">
+				                      <div class="form-group">
+				                        <label><span>*</span> Номер телефона:</label>
+				                        <input type="tel" name="phone_number" id="phone_number" class="form-control input-sm" placeholder="+7 (___) ___-__-__" required="required"/>
+				                        <label>Ваша должность:</label>
+				                        <select class="form-control" name="your_position" id="your_position">
+				                          <option>Снабженец</option>
+				                          <option>Снабженец 2</option>
+				                          <option>Снабженец 3</option>
+				                          <option>Снабженец 4</option>
+				                          <option>Снабженец 5</option>
+				                        </select>
+				                        <label>Как срочно вам нужен ответ?</label>
+				                        <select class="form-control" name="response" id="response">
+				                          <option>В течение 30 минут</option>
+				                          <option>В течение 30 минут 2</option>
+				                          <option>В течение 30 минут 3</option>
+				                          <option>В течение 30 минут 4</option>
+				                          <option>В течение 30 минут 5</option>
+				                        </select>
+				                      </div>
+				                    </div>
+				                    <div class="col-sm-12">
+				                      <label>Категория интересующих вас товаров:</label>
+				                      <select class="form-control" name="category" id="category">
+				                        <option>Дистанционная рамка Thermix<![CDATA[&reg;]]> Ambitherm<![CDATA[&reg;]]> plus</option>
+				                        <option>Комплектующие для дистанционной рамки</option>
+				                        <option>Полиамидный профиль Timberal-Insulbar<![CDATA[&reg;]]> Термоизолирующий профиль Timberal<![CDATA[&reg;]]> Profiles (H-PVC),</option>
+				                        <option>Профили из вспененного полиэтилена AdiFoam</option>
+				                        <option>Уплотнители из TPV Foam </option>
+				                        <option>Я по другому вопросу</option>
+				                      </select>
+				                    </div>
+				                  </div>
+				                  <div class="row">
+				                    <div class="col-sm-12">
+				                      <div class="form-group">
+				                        <label>Важные уточнения:</label>
+				                        <textarea class="form-control" rows="3" name="clarification" id="clarification"></textarea>
+				                        <div class="captcha">
+				                          <div class="captcha-left">
+				                            <label><span>*</span><small id="cnum1"></small> <small>+</small> <small id="cnum2"></small> <small>=</small></label>
+				                            <input type="text" id="ctotal" autocomplete="off" class="form-control input-sm" name="captcha" required="required"/>
+				                          </div>
+				                          <div class="captcha-right">
+				                            <label>Мы хотим убедиться, что вы не робот, и что вы не забыли школьную арифметику :)</label>
+				                          </div>
+				                        </div>
+				                        <button id="contactform" type="submit" class="btn btn-lg btn-success" role="button">отправить сообщение</button>
+				                        <label><span>*</span> — поля, обязательные для заполнения</label>
+				                      </div>
+				                    </div>
+				                  </div>
+				                </form>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<!-- pop 2 end -->
+			</xpath>
+		</template>
+	</data>
+</openerp>
